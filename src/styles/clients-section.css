@@ -1,0 +1,80 @@
+.clients {
+  margin: 0 auto;
+  background-color: rgba(73, 142, 2, 0.34);
+  padding: 100px 0;
+  border-top: 2px solid rgb(73, 142, 2);
+  border-bottom: 2px solid rgb(73, 142, 2);
+  margin-bottom: 120px;
+}
+
+.clients-title {
+  font-weight: 400;
+  font-size: 78px;
+  line-height: 1;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.clients__wrapper {
+  display: flex;
+  background-color: #111111;
+  box-shadow: 0 -80px 120px rgba(0, 0, 0, 0.75), 0 80px 120px rgba(0, 0, 0, 0.75);
+}
+
+.clients__box {
+  position: relative;
+  flex: 1;
+  height: 263px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  background-color: #111111;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clients__box:last-child {
+  border-right: none;
+}
+
+.clients__box:nth-child(odd) {
+  box-shadow: inset 60px 0 80px rgba(0, 0, 0, 0.55), inset -60px 0 80px rgba(0, 0, 0, 0.55);
+}
+
+.clients__box:nth-child(even) {
+  box-shadow: inset 60px 0 80px rgba(0, 0, 0, 0.35), inset -60px 0 80px rgba(0, 0, 0, 0.35);
+}
+
+.clients__box.is-gradient {
+  background: linear-gradient(180deg, rgba(73, 142, 2, 0.18) 0%, rgba(13, 18, 10, 0) 100%), #111111;
+}
+
+.clients__box-title {
+  font-weight: 300;
+  font-size: 87px;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: rgb(174, 255, 0);
+  margin-left: 28px;
+}
+
+.clients__box-title.accent-color {
+  color: #b0ff00;
+}
+
+.clients__box-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 28px;
+  text-align: left;
+}
+
+.container-clients {
+  background-color: #b0ff00;
+}/*# sourceMappingURL=clients-section.css.map */

@@ -1,0 +1,74 @@
+.work-slider {
+  margin-bottom: 100px;
+  overflow: hidden !important;
+  padding: 0 10px;
+}
+.work-slider .swiper-slide {
+  width: 422px !important;
+  opacity: 0.3;
+  filter: grayscale(100%);
+  transition: all 0.6s ease;
+  transform: scale(0.9);
+}
+.work-slider .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  clip-path: inset(0 2px 0 0);
+}
+.work-slider .swiper-slide-visible,
+.work-slider .swiper-slide-active,
+.work-slider .swiper-slide-next,
+.work-slider .swiper-slide-next + .swiper-slide {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1);
+}
+.work-slider .swiper-button-next,
+.work-slider .swiper-button-prev {
+  width: 20px !important;
+  height: 34px !important;
+  background: none !important;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  position: absolute;
+  filter: drop-shadow(0 0 18px rgb(8, 15, 5)) drop-shadow(0 0 10px rgb(8, 15, 5)) drop-shadow(1px 1px 12px rgb(8, 15, 5)) drop-shadow(2px 9px 30px rgb(8, 15, 5)) !important;
+  transition: transform 0.2s ease, filter 0.2s ease !important;
+}
+.work-slider .swiper-button-next::after,
+.work-slider .swiper-button-prev::after {
+  display: none !important;
+}
+.work-slider .swiper-button-next svg,
+.work-slider .swiper-button-prev svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.work-slider .swiper-button-next svg path,
+.work-slider .swiper-button-prev svg path {
+  transition: stroke 0.3s ease;
+}
+.work-slider .swiper-button-next:hover,
+.work-slider .swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.1) !important;
+  filter: drop-shadow(0 0 10px rgb(75, 142, 5)) !important;
+}
+.work-slider .swiper-button-next:hover svg path,
+.work-slider .swiper-button-prev:hover svg path {
+  stroke: #4b8e05;
+}
+.work-slider .swiper-button-next.swiper-button-disabled,
+.work-slider .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.1 !important;
+  filter: none !important;
+}
+.work-slider .swiper-button-next {
+  right: 35px;
+}
+.work-slider .swiper-button-prev {
+  left: 35px;
+}/*# sourceMappingURL=work-section.css.map */
