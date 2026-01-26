@@ -25,9 +25,18 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
 
       // Сітка для шахового порядку
-      &:nth-child(1) { grid-column: 1; grid-row: 1; }
-      &:nth-child(2) { grid-column: 3; grid-row: 1; }
-      &:nth-child(3) { grid-column: 2; grid-row: 2; }
+      &:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      &:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      &:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+      }
       &:nth-child(4) {
         grid-column: 4;
         grid-row: 2;
@@ -35,13 +44,17 @@
         border: none;
 
         // Білі кути для зеленої картки
-        &::before, &::after, .corners::before, .corners::after {
+        &::before,
+        &::after,
+        .corners::before,
+        .corners::after {
           border-color: #fff;
         }
       }
 
       // Кути: Лівий верх та Правий низ
-      &::before, &::after {
+      &::before,
+      &::after {
         content: '';
         position: absolute;
         width: 31px;
@@ -51,13 +64,17 @@
       }
 
       &::before {
-        top: 10.5px; left: 10.5px;
-        border-right: none; border-bottom: none;
+        top: 10.5px;
+        left: 10.5px;
+        border-right: none;
+        border-bottom: none;
       }
 
       &::after {
-        bottom: 10.5px; right: 10.5px;
-        border-top: none; border-left: none;
+        bottom: 10.5px;
+        right: 10.5px;
+        border-top: none;
+        border-left: none;
       }
 
       // Вкладений span для: Правий верх та Лівий низ
@@ -66,7 +83,8 @@
         inset: 0;
         pointer-events: none;
 
-        &::before, &::after {
+        &::before,
+        &::after {
           content: '';
           position: absolute;
           width: 31px;
@@ -75,13 +93,17 @@
         }
 
         &::before {
-          top: 10.5px; right: 10.5px;
-          border-left: none; border-bottom: none;
+          top: 10.5px;
+          right: 10.5px;
+          border-left: none;
+          border-bottom: none;
         }
 
         &::after {
-          bottom: 10.5px; left: 10.5px;
-          border-top: none; border-right: none;
+          bottom: 10.5px;
+          left: 10.5px;
+          border-top: none;
+          border-right: none;
         }
       }
     }

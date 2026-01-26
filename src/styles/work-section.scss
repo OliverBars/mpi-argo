@@ -39,13 +39,14 @@
     transform: translateY(-50%) !important;
     position: absolute;
 
-    filter:
-      drop-shadow(0 0 18px rgba(8, 15, 5, 1))
+    filter: drop-shadow(0 0 18px rgba(8, 15, 5, 1))
       drop-shadow(0 0 10px rgba(8, 15, 5, 1))
       drop-shadow(1px 1px 12px rgba(8, 15, 5, 1))
       drop-shadow(2px 9px 30px rgba(8, 15, 5, 1)) !important;
 
-    transition: transform 0.2s ease, filter 0.2s ease !important;
+    transition:
+      transform 0.2s ease,
+      filter 0.2s ease !important;
 
     &::after {
       display: none !important;
@@ -74,6 +75,10 @@
     }
   }
 
-  .swiper-button-next { right: 35px; }
-  .swiper-button-prev { left: 35px; }
+  .swiper-button-next {
+    right: 35px;
+  }
+  .swiper-button-prev {
+    left: 35px;
+  }
 }
