@@ -1,0 +1,214 @@
+.header {
+  margin-top: 40px;
+  margin-bottom: 59px;
+}
+
+.nav__bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &-img {
+    margin-left: -0.7em;
+    width: 111px;
+    height: 74px;
+    margin-right: auto;
+    display: block;
+  }
+
+  &-ul {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &-li {
+    padding-right: 24px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.6s;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      color: #aeff00;
+    }
+  }
+
+  .nav__burger {
+    display: none;
+    width: 32px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    z-index: 101;
+
+    span,
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      top: 0;
+    }
+    span {
+      top: 10px;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    .nav__burger {
+      span {
+        opacity: 0;
+      }
+      &::before {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        bottom: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .nav__bar-ul {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .nav__bar {
+    &-li {
+      padding-right: 34px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 40px;
+  }
+  .nav__bar {
+    justify-content: space-between;
+
+    &-ul {
+      position: absolute;
+      top: 0px; // Дистанція під хрестиком
+      right: 10px;
+      width: 136px;
+      height: 206px;
+      background-color: #4b8e05; // Зелений колір з макета
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      gap: 12px;
+      z-index: 100;
+
+      // Анімація виїзду справа
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(20px);
+      transition: all 0.4s ease;
+    }
+
+    .nav__burger {
+      display: block;
+    }
+
+    &-li {
+      padding: 0;
+      width: 100%;
+    }
+
+    &-link {
+      font-size: 14px;
+      color: #fff; // Білий текст
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    margin-bottom: 24px;
+  }
+  .nav__bar-img {
+    width: 70px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-left: -12px;
+  }
+  .nav__bar {
+    padding-top: 20px;
+    &-link {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: -2%;
+    }
+    &-items {
+      width: 19.82px !important;
+      height: 19.82px;
+    }
+  }
+  .nav {
+    &__bar {
+      &-ul {
+        top: 23px;
+
+        width: 168px;
+        height: 229px;
+        background-color: rgba(8, 15, 5, 1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      &-link {
+        padding-top: 9px;
+        font-size: 18px;
+      }
+    }
+  }
+  .nav__bar .nav__burger {
+    width: 21px;
+  }
+  .nav__bar .nav__burger::before {
+    top: 4px;
+  }
+  .nav__bar .nav__burger::after {
+    bottom: 4px;
+  }
+  .contacts__item:last-child {
+    padding-bottom: 5px !important;
+  }
+}

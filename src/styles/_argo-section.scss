@@ -1,0 +1,145 @@
+.section__argo {
+  margin-bottom: 124px;
+  position: relative; // Додано для коректного позиціонування абсолютного фону
+
+  &-bg {
+    position: absolute;
+    top: 15px;
+    right: 250px;
+    width: 727px;
+    height: 727px;
+
+    background-image: url(../img/bc-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(1.3) contrast(1.1);
+
+    z-index: 0;
+    pointer-events: none;
+
+    // Єдиний стандарт маски для всіх розмірів
+    -webkit-mask-image: radial-gradient(
+      circle,
+      black 25%,
+      rgba(0, 0, 0, 0.5) 30%,
+      transparent 75%
+    );
+    mask-image: radial-gradient(
+      circle,
+      black 25%,
+      rgba(0, 0, 0, 0.5) 30%,
+      transparent 75%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 59px;
+    color: #b9b9b9;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 459.23px;
+    line-height: 80%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-left: -0.07em;
+    width: 815px;
+  }
+
+  &-text {
+    font-weight: 500;
+    font-size: 194.64px;
+    line-height: 80%;
+    letter-spacing: -3%;
+    text-align: right;
+    text-transform: lowercase;
+  }
+}
+
+.section__argo > *:not(.section__argo-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1150px) {
+  .section__argo {
+    &-bg {
+      right: -50px;
+    }
+    &-title {
+      font-size: 300px;
+    }
+    &-text {
+      font-size: 150px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .section__argo {
+    &-wrapper {
+      text-align: center;
+    }
+    &-bg {
+      right: 75px;
+      top: 15px;
+      width: 400px;
+      height: 400px; // Важливо тримати висоту, щоб маска була кругла
+    }
+    &-title {
+      font-size: 200px;
+      width: 100%;
+    }
+    &-text {
+      font-size: 120px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .section__argo {
+    &-bg {
+      right: -50px;
+    }
+    &-title {
+      font-size: 120px;
+    }
+    &-text {
+      font-size: 70px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .section__argo {
+    margin-bottom: 48px;
+    &__wrapper {
+      margin-bottom: 160px;
+    }
+
+    &-bg {
+      top: -29px;
+      right: -12px;
+      width: 243px;
+      height: 243px;
+    }
+    &-title {
+      font-size: 114.75px;
+      margin-left: -19.93px;
+    }
+    &-text {
+      font-size: 51.09px;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.clients {
+  font-weight: 300;
+  width: 100%;
+  margin: 0 auto 120px;
+  background-color: rgba(73, 142, 2, 0.34);
+  padding: 100px 0;
+  border-top: 2px solid rgba(73, 142, 2, 1);
+  border-bottom: 2px solid rgba(73, 142, 2, 1);
+
+  &-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 1;
+    margin-bottom: 60px;
+    color: #fff;
+  }
+
+  &__wrapper {
+    display: flex;
+    background-color: #111111; // Основний фон контейнера
+    box-shadow:
+      0 -80px 120px rgba(0, 0, 0, 0.75),
+      0 80px 120px rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__box {
+    position: relative;
+    flex: 1;
+    height: 263px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:nth-child(-n + 3)::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 80%;
+      width: 150%;
+      height: 150%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 1);
+      filter: blur(290.59px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    &-title {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      font-size: 87px;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: #b0ff00;
+      margin-left: 28px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+      z-index: 2; // Текст поверх тіні
+
+      span {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 100;
+        line-height: 1;
+        display: inline-block;
+        margin-top: -7px;
+      }
+    }
+
+    &-text {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-left: 28px;
+      position: relative;
+      z-index: 2; // Текст поверх тіні
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .clients {
+    padding: 60px 0;
+    margin-bottom: 80px;
+
+    &-title {
+      font-size: clamp(40px, 8vw, 60px);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__box {
+      flex: 0 0 50%;
+      height: 220px;
+      border-bottom: 1px solid rgba(73, 142, 2, 0.2);
+
+      &::before {
+        left: 50%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .clients {
+    padding: 40px 0;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between !important;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &__box {
+      height: 160px !important;
+      margin-bottom: 24px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 14px;
+      background-color: #111111;
+      box-sizing: border-box;
+
+      &-title {
+        font-size: 50px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .clients {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: transparent;
+
+      top: 20px;
+      background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 80%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .clients {
+    &-title {
+      text-transform: none;
+      padding: 24px 0;
+      margin: 0;
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 0 0 50%;
+      height: 130px !important;
+
+      &-title {
+        gap: 0;
+        font-size: 43px;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 200 !important;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        padding-top: 14px;
+      }
+
+      &-text {
+        font-size: 12.54px;
+        margin-left: 0;
+      }
+    }
+  }
+}

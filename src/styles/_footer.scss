@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1350px) {
+  .footer {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .footer {
+    padding: 20px;
+    top: 0;
+    &-contacts__item:last-child {
+      font-size: 9px;
+      padding-bottom: 3.4px;
+    }
+    &-contacts__item {
+      font-size: 9px;
+      align-items: center;
+    }
+    &__box-logo {
+      width: 84px;
+    }
+  }
+}

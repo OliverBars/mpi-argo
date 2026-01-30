@@ -1,0 +1,79 @@
+.foto {
+  margin-bottom: 140px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &-img {
+      width: calc((100% - 48px) / 3);
+      height: 540px;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+      clip-path: inset(0 2px 0 0);
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  // Краще ставити 550, щоб на всіх мобільних працювало
+  .foto {
+    margin-bottom: 80px;
+    width: 100%;
+    overflow: hidden; // Важливо, щоб не було горизонтального скролу всього сайту
+
+    &__wrapper {
+      margin-left: 20px;
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      gap: 12px !important;
+      padding: 0 20px 20px !important;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &-img {
+        flex: 0 0 280px !important;
+        width: 280px !important;
+        height: 380px !important;
+        object-fit: cover;
+        scroll-snap-align: center;
+        display: block !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .foto {
+    margin-bottom: 46px;
+
+    &__wrapper {
+      // Вирівнюємо контент по лівому краю, щоб бачити перші дві картинки
+      justify-content: flex-start !important;
+      padding: 0 20px 15px !important;
+
+      &-img {
+        // Жорстко 154x196
+        flex: 0 0 154px !important;
+        width: 154px !important;
+        height: 191px !important;
+
+        // Фіксуємо картинку по лівому краю при скролі
+        scroll-snap-align: start !important;
+      }
+    }
+  }
+}

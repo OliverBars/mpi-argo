@@ -1,6 +1,5 @@
 .steps {
   color: #fff;
-  font-family: sans-serif;
 
   &__container {
     max-width: 1440px;
@@ -10,7 +9,7 @@
 
   &__main-title {
     font-weight: 400;
-    font-size: 32px; // Менший заголовок для мобільних
+    font-size: 32px;
     line-height: 110%;
     margin-bottom: 40px;
   }
@@ -18,7 +17,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 60px; // Менший розрив на мобільних
+    gap: 60px;
   }
 
   &__item {
@@ -31,9 +30,9 @@
   &__number {
     color: rgba(212, 255, 0, 0.15);
     font-weight: 600;
-    font-size: 80px; // Зменшуємо цифру
+    font-size: 80px;
     line-height: 1;
-    margin-bottom: -30px; // Наплив тексту на цифру
+    margin-bottom: -30px;
     pointer-events: none;
   }
 
@@ -60,7 +59,7 @@
   }
 
   // --- АДАПТИВ ДЛЯ ВЕЛИКИХ ЕКРАНІВ ---
-  @media (min-width: 1024px) {
+  @media (max-width: 1700px) {
     &__main-title {
       font-size: 78px;
       margin-bottom: 70px;
@@ -116,7 +115,7 @@
     }
 
     &__line {
-      display: flex; // Повертаємо лінію тільки на десктопі
+      display: flex;
       align-items: flex-end;
       height: 40px;
 
@@ -125,7 +124,7 @@
         height: 4px;
         background-color: #fff;
         border-radius: 50%;
-        margin-bottom: -2px;
+        margin-bottom: -1.5px;
         flex-shrink: 0;
       }
 
@@ -150,13 +149,8 @@
           left: 0;
           transform-origin: left bottom;
           transform: rotate(-45deg);
-          background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.5) 50%,
-            transparent 50%
-          );
-          background-size: 4px 1px;
-          background-repeat: repeat-x;
+          // ВИПРАВЛЕНО: Суцільна лінія замість градієнта
+          background-color: rgba(255, 255, 255, 0.5);
         }
       }
 
@@ -165,7 +159,7 @@
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         height: 40px;
         position: relative;
-        top: -1px;
+        top: -1.9px;
       }
     }
   }
@@ -196,5 +190,142 @@
   &__container {
     position: relative;
     z-index: 2;
+  }
+}
+
+@media (max-width: 1050px) {
+  .steps__list {
+    display: flex;
+    flex-direction: column;
+    width: 342px;
+    gap: 10px;
+  }
+  .steps__item {
+    &--right {
+      margin: 0;
+      padding: 0;
+    }
+    .steps__item-img {
+      display: none;
+    }
+  }
+  .steps__line {
+    &-end {
+      min-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .steps__main {
+    &-title {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 100%;
+      letter-spacing: -2%;
+      text-align: center;
+    }
+  }
+  .steps {
+    &__line .steps__line-main {
+      width: 255px;
+    }
+    &__number {
+      font-size: 140px;
+      left: 26px;
+      top: -16px;
+    }
+    &__title {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      left: 314px;
+      top: -7px;
+      font-weight: 400;
+      font-size: 11.12px;
+    }
+    &__subtitle {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      left: 314px;
+      top: -31px;
+    }
+    &__item-img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .steps {
+    &__line .steps__line-main {
+      width: 150px;
+    }
+    &__line-end {
+      width: 900px;
+    }
+    &__title {
+      left: 206px;
+      font-size: 10px;
+    }
+    &__subtitle {
+      left: 206px;
+      font-size: 10px;
+    }
+    &__number {
+      font-size: 90px;
+      left: 4px;
+      top: 26px;
+    }
+  }
+}
+@media (max-width: 461px) {
+  .steps {
+    &__main-title {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 100%;
+      letter-spacing: -2%;
+      text-align: center;
+
+      margin-bottom: -24px;
+    }
+
+    &__line .steps__line-main {
+      width: 124px;
+    }
+    &__title {
+      left: 152px;
+      font-size: 8.12px;
+      top: 16px;
+    }
+    &__subtitle {
+      font-size: 7.73px;
+      left: 152px;
+      top: -20px;
+    }
+    &__number {
+      font-size: 76.14px;
+      line-height: 140%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      left: 4px;
+      top: 24px;
+    }
+  }
+  .steps__line-end {
+    min-width: 184px;
+  }
+
+  .steps__line .steps__line-slope::after {
+    width: 32px;
+  }
+  .steps__line-end {
+    top: 17.1px !important;
+    left: -18px;
   }
 }

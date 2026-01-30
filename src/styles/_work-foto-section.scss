@@ -1,0 +1,149 @@
+.work-foto {
+  margin-bottom: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.work-foto__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.work-foto::after {
+  content: '';
+  position: absolute;
+  inset: -120px;
+  pointer-events: none;
+  z-index: 5;
+
+  background: linear-gradient(
+      to top,
+      rgba(8, 15, 5, 1) 19%,
+      rgba(34, 18, 8, 0) 30%
+    ),
+    linear-gradient(to bottom, rgba(8, 15, 5, 1) 12%, rgba(34, 18, 8, 0) 30%),
+    linear-gradient(to left, rgba(8, 15, 5, 1) 19%, rgba(34, 18, 8, 0) 30%),
+    linear-gradient(to right, rgba(8, 15, 5, 1) 19%, rgba(34, 18, 8, 0) 30%);
+}
+
+.work-foto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+
+  background: linear-gradient(
+      to right,
+      rgba(8, 15, 5, 1) 100px,
+      rgba(8, 15, 5, 0.7) 124px,
+      rgba(34, 18, 8, 0) 260px
+    ),
+    linear-gradient(
+      to left,
+      rgba(8, 15, 5, 1) 0,
+      rgba(8, 15, 5, 0.7) 124px,
+      rgba(34, 18, 8, 0) 260px
+    );
+}
+
+.work-foto {
+  margin: 0 auto 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .work-foto {
+    margin: 0 auto 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+      background: linear-gradient(
+          to right,
+          rgba(8, 15, 5, 1) 100px,
+          rgba(8, 15, 5, 0.7) 124px,
+          rgba(34, 18, 8, 0) 260px
+        ),
+        linear-gradient(
+          to left,
+          rgba(8, 15, 5, 1) 0,
+          rgba(8, 15, 5, 0.7) 124px,
+          rgba(34, 18, 8, 0) 260px
+        );
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -120px;
+      pointer-events: none;
+      z-index: 5;
+      background: linear-gradient(
+          to top,
+          rgba(8, 15, 5, 1) 19%,
+          rgba(34, 18, 8, 0) 30%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(8, 15, 5, 1) 12%,
+          rgba(34, 18, 8, 0) 30%
+        ),
+        linear-gradient(to left, rgba(8, 15, 5, 1) 19%, rgba(34, 18, 8, 0) 30%),
+        linear-gradient(to right, rgba(8, 15, 5, 1) 19%, rgba(34, 18, 8, 0) 30%);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .work-foto {
+    margin-bottom: 0;
+    &::before {
+      background: linear-gradient(
+          to right,
+          rgba(8, 15, 5, 0.6) 40px,
+          rgba(8, 15, 5, 0.3) 80px,
+          rgba(34, 18, 8, 0) 150px
+        ),
+        linear-gradient(
+          to left,
+          rgba(8, 15, 5, 0.6) 40px,
+          rgba(8, 15, 5, 0.3) 80px,
+          rgba(34, 18, 8, 0) 150px
+        );
+    }
+
+    &::after {
+      inset: -50px;
+    }
+  }
+}

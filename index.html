@@ -13,21 +13,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="./src/css/style.css"
-    />
     <script
-      src=".src/scripts/main.js"
-      defer
-    ></script>
-
-    <link
-      rel="stylesheet"
-      href="src/css/style.css"
-    />
-    <script
-      src="src/scripts/main.js"
+      type="module"
+      src="/src/scripts/main.js"
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -47,7 +35,7 @@
           <ul class="nav__bar-ul">
             <li class="nav__bar-li">
               <a
-                href="#"
+                href="#products"
                 class="nav__bar-link"
               >
                 Вироби
@@ -55,7 +43,7 @@
             </li>
             <li class="nav__bar-li">
               <a
-                href="#"
+                href="#check"
                 class="nav__bar-link"
               >
                 Види робіт
@@ -63,7 +51,7 @@
             </li>
             <li class="nav__bar-li">
               <a
-                href="#"
+                href="#steps"
                 class="nav__bar-link"
               >
                 Як ми працюємо
@@ -71,7 +59,7 @@
             </li>
             <li class="nav__bar-li">
               <a
-                href="#"
+                href="#materials"
                 class="nav__bar-link"
               >
                 Матеріали
@@ -79,7 +67,7 @@
             </li>
             <li class="nav__bar-li">
               <a
-                href="#"
+                href="#clients"
                 class="nav__bar-link"
               >
                 Наші клієнти
@@ -116,7 +104,7 @@
               <img
                 src="./src/img/phone-icon.svg"
                 alt="Phone"
-                class="contacts__icon"
+                class="contacts__icon nav__bar-items"
               />
               <a
                 href="tel:+380981324464"
@@ -130,7 +118,7 @@
               <img
                 src="./src/img/phone-icon.svg"
                 alt="Phone"
-                class="contacts__icon"
+                class="contacts__icon nav__bar-items"
               />
               <a
                 href="tel:+380632783680"
@@ -144,7 +132,7 @@
               <img
                 src="./src/img/tiktok-icon.svg"
                 alt="TikTok"
-                class="contacts__icon"
+                class="contacts__icon nav__bar-items"
               />
               <a
                 href="https://www.tiktok.com/@mpi.agro?_r=1"
@@ -156,7 +144,8 @@
           </div>
         </div>
       </section>
-      <section class="products">
+
+      <section class="products" id="products">
         <h3 class="products-title">Що ми виготовляємо</h3>
         <div class="products__container">
           <div class="products__container-card">
@@ -177,7 +166,7 @@
           <div class="products__container-card">
             <span class="corners"></span>
             <img
-              src="./src/img/products-img-2.svg"
+              src="./src/img/products-img-3.svg"
               alt="img"
               class="products__container-img"
             />
@@ -192,7 +181,7 @@
           <div class="products__container-card">
             <span class="corners"></span>
             <img
-              src="./src/img/products-img-3.svg"
+              src="./src/img/products-img-2.svg"
               alt="img"
               class="products__container-img"
             />
@@ -300,7 +289,8 @@
           </div>
         </div>
       </section>
-      <section class="check">
+
+      <section class="check" id="check">
         <div class="check__container">
           <div class="check__right">
             <h4 class="check__right-title">Види робіт</h4>
@@ -427,11 +417,11 @@
         </div>
       </section>
     </div>
-    <section class="clients">
+    <section class="clients" id="clients">
       <div class="container">
         <h4 class="clients-title">Для кого ми працюємо:</h4>
         <div class="clients__wrapper">
-          <div class="clients__box">
+          <div class="clients__box clients__box-bottom">
             <span class="clients__box-title">
               <span>[</span>
               01
@@ -451,7 +441,7 @@
               КОМПАНІЇ
             </p>
           </div>
-          <div class="clients__box">
+          <div class="clients__box clients__box-bottom">
             <span class="clients__box-title">
               <span>[</span>
               03
@@ -486,7 +476,7 @@
           class="work-foto__img"
         />
       </section>
-      <section class="materials">
+      <section class="materials" id="materials">
         <h5 class="materials-title">Матеріали</h5>
         <p class="materials-text">Працюємо з:</p>
         <div class="materials__wrapper">
@@ -513,7 +503,7 @@
           class="materials-foto"
         />
       </section>
-      <section class="steps">
+      <section class="steps" id="steps">
         <div class="steps__container">
           <h2 class="steps__main-title">Як ми працюємо</h2>
 
@@ -603,11 +593,11 @@
             class="footer__box-logo"
           />
           <div class="contacts">
-            <div class="contacts__item">
+            <div class="contacts__item footer-contacts__item">
               <img
                 src="./src/img/phone-icon.svg"
                 alt="Phone"
-                class="contacts__icon"
+                class="contacts__icon footer-contacts__icon"
               />
               <a
                 href="tel:+380981324464"
@@ -617,11 +607,11 @@
               </a>
             </div>
 
-            <div class="contacts__item">
+            <div class="contacts__item footer-contacts__item">
               <img
                 src="./src/img/phone-icon.svg"
                 alt="Phone"
-                class="contacts__icon"
+                class="contacts__icon footer-contacts__icon"
               />
               <a
                 href="tel:+380632783680"
@@ -631,11 +621,13 @@
               </a>
             </div>
 
-            <div class="contacts__item contacts__item--tiktok">
+            <div
+              class="contacts__item contacts__item--tiktok footer-contacts__item"
+            >
               <img
                 src="./src/img/tiktok-icon.svg"
                 alt="TikTok"
-                class="contacts__icon"
+                class="contacts__icon footer-contacts__icon"
               />
               <a
                 href="https://www.tiktok.com/@mpi.agro?_r=1"
