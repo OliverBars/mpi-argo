@@ -120,6 +120,30 @@
     }
   }
 }
+@media (max-width: 500px) {
+.section__argo {
+    margin-bottom: 48px;
+    margin: 0 auto;
+    &-text{
+      margin: 0;
+      padding: 0;
+      margin-right: 20px;
+    }
+    &-title{
+      margin-left: 20px;
+    }
+    &__wrapper {
+      margin-bottom: 160px;
+    }
+
+    &-bg {
+      top: -40px;
+      right: 10px;
+      width: 343px;
+      height: 343px;
+    }
+}
+}
 
 @media (max-width: 375px) {
   .section__argo {

@@ -219,7 +219,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .products {
     margin-bottom: 48px;
     &-title {
@@ -251,7 +251,7 @@
       text-transform: inherit;
       font-size: 18px;
       padding-left: 6px;
-      padding-bottom: 0px;
+      padding-bottom: 3px;
     }
 
     &-title {
