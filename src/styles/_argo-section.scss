@@ -1,6 +1,7 @@
 .section__argo {
   margin-bottom: 124px;
   position: relative; // Додано для коректного позиціонування абсолютного фону
+  padding: 0 20px;
 
   &-bg {
     position: absolute;
@@ -80,7 +81,6 @@
     }
     &-text {
       font-size: 150px;
-      padding-right: 20px;
     }
   }
 }
@@ -110,57 +110,38 @@
 @media (max-width: 580px) {
   .section__argo {
     &-bg {
-      right: -50px;
+      width: 300px;
+      left: 80px;
+      top: -40px;
     }
     &-title {
       font-size: 120px;
+      text-align: left;
     }
     &-text {
       font-size: 70px;
     }
   }
 }
-@media (max-width: 500px) {
-.section__argo {
-    margin-bottom: 48px;
-    margin: 0 auto;
-    &-text{
-      margin: 0;
-      padding: 0;
-      margin-right: 20px;
-    }
-    &-title{
-      margin-left: 20px;
-    }
-    &__wrapper {
-      margin-bottom: 160px;
-    }
-
-    &-bg {
-      top: -40px;
-      right: 10px;
-      width: 343px;
-      height: 343px;
-    }
-}
-}
 
 @media (max-width: 375px) {
   .section__argo {
     margin-bottom: 48px;
-    &__wrapper {
-      margin-bottom: 160px;
+    &-wrapper {
+      margin-bottom: 108px;
     }
 
     &-bg {
-      top: -29px;
-      right: -12px;
+      top: -16px;
+      left: 120px;
       width: 243px;
       height: 243px;
     }
     &-title {
       font-size: 114.75px;
-      margin-left: -19.93px;
+      margin-left: -42.93px;
+            text-align: center;
+
     }
     &-text {
       font-size: 51.09px;
