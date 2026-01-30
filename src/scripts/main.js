@@ -1,6 +1,6 @@
 /* global Swiper */
 'use strict';
-import '../styles/main.scss';
+// import '../styles/main.scss';
 
 const swiper = new Swiper('.work-slider', {
   slidesPerView: 3,
